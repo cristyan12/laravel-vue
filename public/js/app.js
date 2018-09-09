@@ -11439,21 +11439,22 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 });
 ;
 //# sourceMappingURL=axios.map
-var urlUsers = 'https://jsonplaceholder.typicode.com/users';
+
 new Vue({
-  el: '#main',
+  el: '#crud',
   created: function created() {
-    this.getUsers();
+    this.getKeeps();
   },
   data: {
-    lists: []
+    keeps: []
   },
   methods: {
-    getUsers: function getUsers() {
+    getKeeps: function getKeeps() {
       var _this = this;
 
-      axios.get(urlUsers).then(function (response) {
-        _this.lists = response.data;
+      var urlKeeps = '/tasks';
+      axios.get(urlKeeps).then(function (response) {
+        _this.keeps = response.data;
       });
     }
   }
