@@ -14,7 +14,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        $tasks = Task::get();
+
+        return $tasks;
     }
 
     /**
@@ -24,7 +26,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        // Formulario
     }
 
     /**
@@ -35,7 +37,7 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Logica de guardar
     }
 
     /**
@@ -46,7 +48,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        return $task; // formulario
     }
 
     /**
@@ -58,7 +60,7 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        //
+        // logica de actualizarion
     }
 
     /**
@@ -69,6 +71,6 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        return $task->delete();
     }
 }
