@@ -8,7 +8,7 @@
         <title>Laravel & VUEjs CRUD</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
         <div id="main" class="container">

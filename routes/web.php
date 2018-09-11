@@ -5,5 +5,5 @@ Route::get('/', function () {
 });
 
 Route::resource('tasks', 'TaskController', [
-    'except' => 'show'
+    'except' => ['show', 'create', 'edit']
 ]);
