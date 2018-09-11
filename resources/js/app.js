@@ -13,7 +13,7 @@ new Vue({
     methods: {
         getKeeps: function() {
             axios.get('/tasks').then(response => {
-                this.keeps = response.data
+                this.keeps = response.data.tasks.data
             });
         },
         editKeep: function(keep) {
