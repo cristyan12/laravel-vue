@@ -13,7 +13,6 @@ let mix = require('laravel-mix');
 
 mix.scripts([
     'resources/js/jquery.js',
-    'resources/js/popper.js',
     'resources/js/bootstrap.js',
     'resources/js/toastr.js',
     'resources/js/vue.js',
