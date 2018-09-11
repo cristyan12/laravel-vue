@@ -34,6 +34,42 @@
             </tbody>
         </table>
 
+        <hr>
+
+        <nav>
+            <ul class="pagination">
+                <li class="page-item" 
+                    v-if="pagination.current_page > 1"
+                >
+                    <a href="#" class="page-link" 
+                        @click.prevent="changePages(pagination.current_page - 1)"
+                    >
+                        <span>Atrás</span>
+                    </a>
+                </li>
+
+                <li class="page-item"
+                    v-for="page in numberOfPages" 
+                    v-bind:class="[ page == isActived ? 'active' : '']"
+                >
+                    <a href="#" class="page-link"
+                        @click.prevent="changePages(page)">
+                        @{{ page }}
+                    </a>
+                </li>
+                
+                <li class="page-item" 
+                    v-if="pagination.current_page < pagination.last_page"
+                >
+                    <a href="#"  class="page-link" 
+                        @click.prevent="changePages(pagination.current_page + 1)"
+                    >
+                        <span>Siguiente</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
         @include('create')
         @include('edit')
     </div>
